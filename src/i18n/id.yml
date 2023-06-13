@@ -1,0 +1,104 @@
+buttons:
+  accept_close_request:
+    emoji: ✅
+    text: Terima
+  cancel:
+    emoji: ➖
+    text: Batal
+  claim:
+    emoji: 🙌
+    text: Klaim
+  close:
+    emoji: ✖️
+    text: Tutup
+  confirm_open:
+    emoji: ✅
+    text: Buat tiket
+  create:
+    emoji: 🎫
+    text: Buat tiket
+  edit:
+    emoji: ✏️
+    text: Edit
+  reject_close_request:
+    emoji: ✖️
+    text: Tolak
+  unclaim:
+    emoji: ♻️
+    text: Lepas
+commands:
+  message:
+    create:
+      name: Buat tiket dari pesan
+    pin:
+      name: Pin pesan
+      not_pinnable:
+        description: |
+          Pesan ini tidak dapat di-pin.
+          Mohon minta bantuan administrator untuk memeriksa izin bot.
+        title: ❌ Kesalahan
+      not_ticket:
+        description: Anda hanya dapat melakukan pemasangan pesan di tiket.
+        title: ❌ Ini bukan saluran tiket
+      pinned:
+        description: Pesan telah di-pin.
+        title: ✅ Pesan di-pin
+  slash:
+    add:
+      added: ➡️ {added} telah ditambahkan oleh {by}.
+      description: Tambahkan anggota ke tiket
+      name: add
+      not_staff:
+        description: Hanya anggota staf yang dapat menambahkan anggota ke tiket orang lain.
+        title: ❌ Kesalahan
+      options:
+        member:
+          description: Anggota yang akan ditambahkan ke tiket
+          name: member
+        ticket:
+          description: Tiket yang akan ditambahkan anggota ke dalamnya
+          name: ticket
+      success:
+        description: "{member} telah ditambahkan ke dalam {ticket}."
+        title: ✅ Ditambahkan
+    claim:
+      description: Klaim tiket
+      name: claim
+      not_staff:
+        description: Hanya anggota staf yang dapat melakukan klaim tiket.
+        title: ❌ Kesalahan
+    close:
+      description: Ajukan permintaan penutupan tiket
+      invalid_time:
+        description: "`{input}` bukan format waktu yang valid."
+        title: ❌ Tidak valid
+      name: close
+      options:
+        reason:
+          description: Alasan penutupan tiket
+          name: reason
+    force-close:
+      closed_one:
+        description: Saluran akan dihapus dalam beberapa detik.
+        title: ✅ Tiket ditutup
+      confirm_multiple:
+        description: >
+          Anda akan menutup **{count}** tiket yang tidak aktif
+          selama lebih dari `{time}`:
+
+          {tickets}
+        title: ❓ Apakah Anda yakin?
+      confirmed_multiple:
+        description: Saluran-saluran tersebut akan dihapus dalam beberapa detik.
+        title:
+          - ✅ Menutup %d tiket
+          - ✅ Menutup %d tiket
+      description: Paksa menutup tiket
+      name: force-close
+      no_tickets:
+        description: >-
+          Tidak ada tiket terbuka yang tidak aktif selama lebih dari
+          `{time}`.
+        title: ❌ Tidak ada tiket
+      not_staff:
+.
